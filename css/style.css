@@ -1,0 +1,29 @@
+body {
+  background-image: url(../img/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -80px;
+ /* background-attachment: fixed; */
+  font-family: 'Tomorrow', sans-serif;
+}
+
+#box {
+  max-width: 700px;
+  opacity: 0.93;
+}
+
+footer a {
+  text-decoration: none !important;
+  color: #a19d9d !important;
+}
+
+.outof {
+  font-family: Nunito Sans;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: .5rem;
+  color: #7c95aa;
+}
+.faint-color {
+  color: #7c95aa;
+}
