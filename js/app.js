@@ -9,6 +9,7 @@ const credits = {
   iotPractical: 1,
   dmTheory: 2,
   dmPractical: 1,
+  ccLab: 1,
   tocTheory: 3,
   project: 3,
   dMath: 4,
@@ -22,6 +23,7 @@ const {
   iotPractical,
   dmTheory,
   dmPractical,
+  ccLab,
   tocTheory,
   project,
   dMath,
@@ -55,6 +57,7 @@ result.addEventListener('click', function () {
   const iotlab = document.getElementById('iotlab').value;
   const dm = document.getElementById('dm').value;
   const dmlab = document.getElementById('dmlab').value;
+  const cc = document.getElementById('cc').value;
   const toc = document.getElementById('toc').value;
   const proj = document.getElementById('proj').value;
   const math = document.getElementById('math').value;
@@ -67,17 +70,18 @@ result.addEventListener('click', function () {
     grade(iotlab) * iotPractical +
     grade(dm) * dmTheory +
     grade(dmlab) * dmPractical +
+    grade(cc) * ccLab +
     grade(toc) * tocTheory +
     grade(proj) * project +
     grade(math) * dMath +
     grade(iseInput) * ise;
-  const sgpa = calculate / 23;
+  const sgpa = calculate / 24;
   const calculatedSgpa = parseFloat(sgpa).toFixed(2);
   showOutputOnUI(calculatedSgpa);
 });
 
 function showOutputOnUI(sgpa) {
-  if (sgpa === -1) {
+  if (sgpa === 0) {
     mes.innerHTML = `Please select a proper Grade 😬`;
     animate(mes, 'heartBeat');
     pointer.innerHTML = `🎃`;
